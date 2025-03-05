@@ -91,7 +91,7 @@ function App() {
 
           <div className="container-btns">
             <button><i className='bi bi-github'></i></button>
-            <button><i className='bi bi-anchor'></i></button>
+            <button><i className='bi bi'></i></button>
           </div>
 
         </div>
