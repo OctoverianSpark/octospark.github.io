@@ -34,6 +34,16 @@ function App() {
   };
 
 
+  const handleDownload = () => {
+    const url = "/cv.pdf"; 
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "cv.pdf"; // Nombre del archivo al descargar
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
 
   return (
     <div className='portfolio-body' ref={sectionRef}>
@@ -44,10 +54,10 @@ function App() {
           <h2>Jean Paul Rodr&iacute;guez Zerpa</h2>
           <span><i className='bi bi-geo-alt-fill'></i> Bogot&aacute;, Colombia</span>
           <div className="container-btns">
-            <button onClick={handleCopy}><i className='bi bi-envelope-open-fill'></i> jeanpaul.hero2@gmail.com</button>
-            <a ><i className='bi bi-file-earmark-text'></i></a>
-            <a href='https://github.com/OctoverianSpark' onClick={e => handleLink(e)}><i className='bi bi-github'></i></a>
-            <a href='https://www.linkedin.com/in/jean-paul-rodriguez-zerpa-6b3270258' onClick={e => handleLink(e)}><i className='bi bi-linkedin'></i></a>
+            <button onClick={handleCopy}><i className='bi bi-envelope-open-fill'></i> <span>Enviame un Correo!</span></button>
+            <button onClick={handleDownload} ><i className='bi bi-file-earmark-text'></i> <span>Descarga mi CV</span></button>
+            <a href='https://github.com/OctoverianSpark' onClick={e => handleLink(e)}><i className='bi bi-github'></i> <span>Mira mi GitHub!</span></a>
+            <a href='https://www.linkedin.com/in/jean-paul-rodriguez-zerpa-6b3270258' onClick={e => handleLink(e)}><i className='bi bi-linkedin'></i> <span>Mi Linkedin</span></a>
           </div>
         </div>
 
@@ -140,15 +150,15 @@ function App() {
 
       </div>
       <hr />
-      <div className="foot">
-        <h2>Jean Paul Rodr&iacute;guez Zerpa</h2>
-        <div className="container-btns">
-          <a href='mailto:jeanpaul.hero2@gmail.com' className="mail-btn"><i className='bi bi-envelope-open-fill'></i> jeanpaul.hero2@gmail.com</a>
-          <a ><i className='bi bi-file-earmark-text'></i></a>
-          <a href='https://github.com/OctoverianSpark' onClick={e => handleLink(e)}><i className='bi bi-github'></i></a>
-          <a href='https://www.linkedin.com/in/jean-paul-rodriguez-zerpa-6b3270258' onClick={e => handleLink(e)}><i className='bi bi-linkedin'></i></a>
+        <div className="foot">
+          <h2>Jean Paul Rodr&iacute;guez Zerpa</h2>
+          <div className="container-btns">
+            <button onClick={handleCopy}><i className='bi bi-envelope-open-fill'></i> <span>Enviame un Correo!</span></button>
+            <button onClick={handleDownload} ><i className='bi bi-file-earmark-text'></i> <span>Descarga mi CV</span></button>
+            <a href='https://github.com/OctoverianSpark' onClick={e => handleLink(e)}><i className='bi bi-github'></i> <span>Mira mi GitHub!</span></a>
+            <a href='https://www.linkedin.com/in/jean-paul-rodriguez-zerpa-6b3270258' onClick={e => handleLink(e)}><i className='bi bi-linkedin'></i> <span>Mi Linkedin</span></a>
+          </div>
         </div>
-      </div>
 
 
 

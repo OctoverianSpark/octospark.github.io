@@ -110,14 +110,16 @@ a:hover {
   justify-content: flex-start;
   gap: 10px;
 
-  h2 {
-    text-align: center;
+  h2,span {
+    text-align: justify;
   }
 
   .info {
     display: grid;
     gap: 20px;
   }
+
+
 }
 
 .about-me {
