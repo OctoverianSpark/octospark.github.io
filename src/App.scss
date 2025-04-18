@@ -12,6 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.portfolio-body{
+  position: absolute;
+  inset: 0;
+  margin: 5rem;
+}
 
 a {
   font-weight: 500;
@@ -244,5 +249,86 @@ body {
   .container-btns {
     display: flex;
     justify-content: flex-start;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .about-me {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .name-and-info {
+    display: grid;
+    place-items: center;
+    h2,span{
+      text-align: center;
+    }
+
+    .container-btns{
+      display: grid;
+      place-items: center;
+      width: 100%;
+    }
+    width: 100%;
+
+  }
+
+  .profile {
+    width: 150px;
+    height: 150px;
+  }
+
+  .experience,
+  .project {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .duration {
+      position: static;
+    }
+  }
+
+  .container-btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .langs,
+  .soft-skills {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .profile {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-me {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .name-and-info {
+    gap: 5px;
+  }
+
+  .container-btns {
+    flex-direction: column;
+    gap: 5px;
   }
 }
