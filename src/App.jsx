@@ -1,30 +1,13 @@
-import { React, useRef } from 'react'
 import './App.scss'
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { ToastContainer,toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
 
 
-  const sectionRef = useRef(null)
-
-  const handleLink = e => {
-
-
-    e.preventDefault()
-    window.open(e.target.href, "_blank")
-
-
-
-  }
-
-
-  const scroll = () => {
-    sectionRef.current?.scrollIntoView({ behavior: "smooth" })
-  }
 
   const handleCopy = async () => {
-    
+
     try {
       await navigator.clipboard.writeText('jeanpaul.hero2@gmail.com');
       toast.success('Correo copiado al portapapeles!');
@@ -35,7 +18,7 @@ function App() {
 
 
   const handleDownload = () => {
-    const url = "/cv.pdf"; 
+    const url = "/cv.pdf";
     const link = document.createElement("a");
     link.href = url;
     link.download = "cv.pdf"; // Nombre del archivo al descargar
@@ -46,8 +29,8 @@ function App() {
 
 
   return (
-    <div className='portfolio-body' ref={sectionRef}>
-      <ToastContainer/>      
+    <div className='portfolio-body' >
+      <ToastContainer />
       <div className="name-and-info">
         <img src="/profile.jpg" alt="s" className='profile' />
         <div className="info">
@@ -56,8 +39,8 @@ function App() {
           <div className="container-btns">
             <button onClick={handleCopy}><i className='bi bi-envelope-open-fill'></i> <span>Enviame un Correo!</span></button>
             <button onClick={handleDownload} ><i className='bi bi-file-earmark-text'></i> <span>Descarga mi CV</span></button>
-            <a href='https://github.com/OctoverianSpark' onClick={e => handleLink(e)}><i className='bi bi-github'></i> <span>Mira mi GitHub!</span></a>
-            <a href='https://www.linkedin.com/in/jean-paul-rodriguez-zerpa-6b3270258' onClick={e => handleLink(e)}><i className='bi bi-linkedin'></i> <span>Mi Linkedin</span></a>
+            <a href='https://github.com/OctoverianSpark' target='_BLANK'><i className='bi bi-github'></i> <span>Mira mi GitHub!</span></a>
+            <a href='https://www.linkedin.com/in/jean-paul-rodriguez-zerpa-6b3270258' target='_BLANK'><i className='bi bi-linkedin'></i> <span>Mi Linkedin</span></a>
           </div>
         </div>
 
@@ -150,15 +133,15 @@ function App() {
 
       </div>
       <hr />
-        <div className="foot">
-          <h2>Jean Paul Rodr&iacute;guez Zerpa</h2>
-          <div className="container-btns">
-            <button onClick={handleCopy}><i className='bi bi-envelope-open-fill'></i> <span>Enviame un Correo!</span></button>
-            <button onClick={handleDownload} ><i className='bi bi-file-earmark-text'></i> <span>Descarga mi CV</span></button>
-            <a href='https://github.com/OctoverianSpark' onClick={e => handleLink(e)}><i className='bi bi-github'></i> <span>Mira mi GitHub!</span></a>
-            <a href='https://www.linkedin.com/in/jean-paul-rodriguez-zerpa-6b3270258' onClick={e => handleLink(e)}><i className='bi bi-linkedin'></i> <span>Mi Linkedin</span></a>
-          </div>
+      <div className="foot">
+        <h2>Jean Paul Rodr&iacute;guez Zerpa</h2>
+        <div className="container-btns">
+          <button onClick={handleCopy}><i className='bi bi-envelope-open-fill'></i> <span>Enviame un Correo!</span></button>
+          <button onClick={handleDownload} ><i className='bi bi-file-earmark-text'></i> <span>Descarga mi CV</span></button>
+          <a href='https://github.com/OctoverianSpark' onClick={e => handleLink(e)}><i className='bi bi-github'></i> <span>Mira mi GitHub!</span></a>
+          <a href='https://www.linkedin.com/in/jean-paul-rodriguez-zerpa-6b3270258' onClick={e => handleLink(e)}><i className='bi bi-linkedin'></i> <span>Mi Linkedin</span></a>
         </div>
+      </div>
 
 
 
