@@ -125,7 +125,7 @@ function App() {
           </div>
 
           <div className="container-btns">
-            <a href='https://github.com/OctoverianSpark/Sub-Productividad' onClick={e => handleLink(e)}><i className='bi bi-github'></i></a>
+            <a href='https://github.com/OctoverianSpark/Sub-Productividad' target='_BLANK'><i className='bi bi-github'></i></a>
           </div>
 
         </div>
@@ -138,8 +138,8 @@ function App() {
         <div className="container-btns">
           <button onClick={handleCopy}><i className='bi bi-envelope-open-fill'></i> <span>Enviame un Correo!</span></button>
           <button onClick={handleDownload} ><i className='bi bi-file-earmark-text'></i> <span>Descarga mi CV</span></button>
-          <a href='https://github.com/OctoverianSpark' onClick={e => handleLink(e)}><i className='bi bi-github'></i> <span>Mira mi GitHub!</span></a>
-          <a href='https://www.linkedin.com/in/jean-paul-rodriguez-zerpa-6b3270258' onClick={e => handleLink(e)}><i className='bi bi-linkedin'></i> <span>Mi Linkedin</span></a>
+          <a href='https://github.com/OctoverianSpark' target='_BLANK'><i className='bi bi-github'></i> <span>Mira mi GitHub!</span></a>
+          <a href='https://www.linkedin.com/in/jean-paul-rodriguez-zerpa-6b3270258' target='_BLANK'><i className='bi bi-linkedin'></i> <span>Mi Linkedin</span></a>
         </div>
       </div>
 
